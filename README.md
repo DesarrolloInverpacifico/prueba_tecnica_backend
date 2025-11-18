@@ -27,7 +27,7 @@ Los clientes no tienen accesos a sus facturas desde hace 3 meses por lo cual tie
 ### Requerimientos
 
 1. Crear la base de datos
-2. Importar los datos proporcionados y generar las 3 facturas de los 3 ultimos meses
+2. Importar los [datos](/data/) proporcionados y generar las 3 facturas de los 3 ultimos meses
 
 Implementar una API Rest que gestiones los siguientes puntos
 
