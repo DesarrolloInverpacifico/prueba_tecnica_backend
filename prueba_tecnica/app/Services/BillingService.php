@@ -8,7 +8,7 @@ use App\Models\InvoiceDetail;
 use App\Models\Meter;
 use App\Models\MeterReading;
 use App\Enums\InvoiceStatus;
-use Illuminate\Support\Carbon;
+use Carbon\Carbon;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Log;
 

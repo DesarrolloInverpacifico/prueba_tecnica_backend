@@ -14,7 +14,7 @@ class Meter extends Model
     protected $fillable = [
         'customer_id',
         'serial_number',
-        'instalation_date',
+        'installation_date',
         'status'
     ];
     protected $casts = [

@@ -7,10 +7,11 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\Relations\HasMany;
+use Illuminate\Database\Eloquent\SoftDeletes;
 
 class Invoice extends Model
 {
-    use HasFactory;
+    use HasFactory,SoftDeletes;
     protected $fillable = [
         'invoice_number',
         'customer_id',
@@ -34,5 +35,8 @@ class Invoice extends Model
     }
     public function invoiceDetails(): HasMany{
         return $this->hasMany(InvoiceDetail::class);
+    }
+    public function payment(): HasMany{
+        return $this->hasMany(Payment::class);
     }
 }
