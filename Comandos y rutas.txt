@@ -1,0 +1,38 @@
+php artisan db:seed
+php artisan invoices:generate-retroactive
+get https://prueba_tecnica.test/api/invoices (muestra todas las facturas)
+get https://prueba_tecnica.test/api/invoices/{invoice}( muestra una factura)
+
+delete https://prueba_tecnica.test/api/invoices/{invoice} ( anula una factura, solo si no ha sido pagada)
+
+post https://prueba_tecnica.test/api/invoices/{invoice}/payments (pago de factura)
+body
+{
+    "amount" : 53550
+}
+
+post https://prueba_tecnica.test/api/invoices/generate (crea una factura)
+body: 
+{
+    "customer_id" : "1",
+    "billing_date" : "2025-04-25"
+}
+
+get https://prueba_tecnica.test/api/meters (muestra todos los medidores con sus lecturas)
+
+get https://prueba_tecnica.test/api/meters/{meter} (Muestra un medidor en especifico y sus lecturas)
+
+post https://prueba_tecnica.test/api/meters (crea un medidor)
+{
+    "customer_id": 2 ,
+    "serial_number": "SN-00007000",
+            "installation_date": "2022-09-20",
+            "status": "active"
+}
+
+post https://prueba_tecnica.test/api/meters/{meter}/readings (registra una lectura con fecha en un medidor)
+{
+    "reading_date": "2025-04-25",
+    "current_reading": 240,
+    "observation": "Lectura mensual"
+}
